@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <!-- Or if you want the latest version from the main branch -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
-    <video controls id="video" style="width: 100vw; max-height: 90vh;"></video>
+    <video muted controls id="video" style="width: 100vw; max-height: 90vh;"></video>
     <br>
     <select name="" id="channel" onchange="media()">
         <option selected
@@ -50,12 +50,10 @@
                 hls.attachMedia(video);
                 setTimeout(() => {
                     video.play();
-                }, 500);
+                }, 1000);
             }
         }
-        setTimeout(() => {
-            media();
-        }, 500);
+        media();
         
        
     </script>
