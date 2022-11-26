@@ -40,9 +40,12 @@
             //
             if (video.canPlayType('application/vnd.apple.mpegurl')) {
                 video.src = videoSrc;
-                //
-                // If no native HLS support, check if HLS.js is supported
-                //
+                 var hls = new Hls();
+                hls.loadSource(videoSrc);
+                hls.attachMedia(video);
+                setTimeout(() => {
+                    video.play();
+                }, 1000);
             } else if (Hls.isSupported()) {
                 var hls = new Hls();
                 hls.loadSource(videoSrc);
