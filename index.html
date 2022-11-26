@@ -35,29 +35,16 @@
         var media = async () => {
             var video = document.getElementById('video');
             var videoSrc = atob(document.getElementById('channel').value)
-            //
-            // First check for native browser HLS support
-            //
-            if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = videoSrc;
-                 var hls = new Hls();
-                hls.loadSource(videoSrc);
-                hls.attachMedia(video);
-                setTimeout(() => {
-                    video.play();
-                }, 1000);
-            } else if (Hls.isSupported()) {
-                var hls = new Hls();
-                hls.loadSource(videoSrc);
-                hls.attachMedia(video);
-                setTimeout(() => {
-                    video.play();
-                }, 1000);
-            }
+            var hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+            setTimeout(() => {
+                video.play();
+            }, 1000);
         }
         media();
-        
-       
+
+
     </script>
 
 </body>
