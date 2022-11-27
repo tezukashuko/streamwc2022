@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IPTV-PhuTruong</title>
 
 </head>
 
-<body style="margin: 0; text-align: center;">
+<body
+    style="margin: 0;text-align: center;background-color: black;color: white;height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;">
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <!-- Or if you want the latest version from the main branch -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
     <video muted controls id="video" style="width: 100vw; max-height: 90vh;"></video>
     <br>
-    <select name="" id="channel" onchange="media()">
-        <option selected
-            value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2Ml92aGxzLnNtaWwvY2h1bmtsaXN0X2I1MDAwMDAwLm0zdTg=">
-            vtv2</option>
-        <option
-            value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2M2hkX3ZobHMuc21pbC9jaHVua2xpc3RfYjUwMDAwMDAubTN1OA==">
-            vtv3</option>
-        <option
-            value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2NmhkX3ZobHMuc21pbC9jaHVua2xpc3RfYjUwMDAwMDAubTN1OA==">
-            vtv can tho, vtv6
-        </option>
-    </select>
+    <span style="margin-top: 1rem;"> <label for=""><strong>Kênh </strong> </label><select name="" id="channel"
+            onchange="media()">
+            <option selected
+                value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2Ml92aGxzLnNtaWwvY2h1bmtsaXN0X2I1MDAwMDAwLm0zdTg=">
+                vtv2</option>
+            <option
+                value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2M2hkX3ZobHMuc21pbC9jaHVua2xpc3RfYjUwMDAwMDAubTN1OA==">
+                vtv3</option>
+            <option
+                value="aHR0cHM6Ly9saXZlY2RuLmZwdHBsYXkubmV0L2hkYTEvdnR2NmhkX3ZobHMuc21pbC9jaHVua2xpc3RfYjUwMDAwMDAubTN1OA==">
+                vtv can tho, vtv6
+            </option>
+        </select></span>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.1.0/base64.js"
         integrity="sha512-S1ZwdmlDDaFLXAWsXRXKnbkNNpmlWFlp5QEsJeiUQnzeLpzp1vxJyMdpCSAgEoAJY21LpQfCyYQ+z+W+1F84Kw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
